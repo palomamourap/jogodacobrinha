@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Jogo da Cobrinha</title>
+    <link rel=stylesheet id="style" type="text/css" href="./css/tema-principal.css" />
+    <link rel="shortcut icon" href="css/images/favicon.png" />
+    <script type="text/javascript" src="./js/js.js"></script>
+    <style>
+      .snake-toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index:10000;
+        padding: 5px;
+      }
+    </style>
+ 
+</head>
+<body>
+    <div class="snake-toolbar">
+      <div style="display:inline-block;margin-right:10px;">
+        <span>Tema:</span>
+        <select onchange="getTheme()" id="select">
+            <option>Tema Lite</option>
+            <option selected>Tema Padrão</option>
+            <option>Tema Escuro</option>
+            <option>Tema Verde</option>
+            <option>Tema Matrix</option>
+        </select>
+      </div>
+      <div style="display:inline-block;margin-right:10px;">
+        <span>Dificuldade:</span>
+        <select id="selectMode">
+            <option value="100">Fácil</option>
+            <option value="75" selected>Medium</option>
+            <option value="50">Difícil</option>
+            <option value="25">Impossível</option>
+            <option value="110">Rush</option>
+        </select>
+      </div>
+      <button onclick="go_full_screen()" id="botao">Tela Cheia</button><br />
+    </div>
+
+    <div id="mode-wrapper" style="display: inline; width: auto;">
+    </div>
+
+    <div id="game-area" tabindex="0">
+    </div>
+    <script type="text/javascript" src="./js/snake.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+</body>
+</html>
